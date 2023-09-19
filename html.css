@@ -1,0 +1,338 @@
+* {
+    box-sizing: border-box;
+    font-family: Inter;
+    src: url(
+
+    );
+}
+body {
+    min-height: 100vh;
+    background-color: black;
+    background-image: url('/assets/pic/DESIGNSYNDROME-PAPERCUT-TEXTURE---TRANSPARENT100.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+}
+h1 {
+    font-family: TacticSansExd-BldIt;
+    src: url('/assets/fonts/TacticSansExd-BldIt.otf');
+    font-size: 30px;
+    color: #e1deda;
+}
+h2 {
+    font-family: Inter;
+    src: url('/assets/fonts/Inter-Regular.ttf');
+    font-weight: bold;
+    text-align: center;
+    color: #e1deda;
+}
+h3 {
+    font-family: Inter;
+    src: url('/assets/fonts/Inter-Regular.ttf');
+    text-align: center;
+    color: #e1deda;
+}
+h3 {
+    font-family: Inter;
+    src: url('/assets/fonts/Inter-Regular.ttf');
+    font-weight: bold;
+    text-align: center;
+    color: #e1deda;
+}
+p {
+    text-align: center;
+    font-family: Inter;
+    src: url('/assets/fonts/Inter-Regular.ttf');
+    font-weight: 400;
+    font-size: 14px;
+    color: #e1deda;
+}
+a {
+    text-decoration: none;
+}
+a:visited { 
+    text-decoration: none; 
+    color: #e1deda; 
+}
+label {
+    color: #e1deda;
+    font-family: Inter;
+    src: url('/assets/fonts/Inter-Regular.ttf');
+    font-weight: bold;
+    text-align: center;
+}
+form {
+    font-family: Inter;
+    src: url('/assets/fonts/Inter-Regular.ttf');
+    text-align: center;
+    margin: 0 auto;
+}
+table {
+    width: 100%;
+    max-width: 100%;
+    color: #e1deda;
+    font-size: 14px;
+    border-collapse: collapse;
+}
+
+td, th{ /* Include 'th' for table headers if needed */
+    padding: 10px 10px; /* Adjust the padding as needed */
+    padding-bottom: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: left;
+    font-size: 16px;
+}
+td:first-child, th:first-child {
+    padding-left: 5%; /* Adjust as needed */
+}
+tr {
+    padding-left: 15px;
+    background-color: #222; /* Header background color */
+    color: #fff; /* Header text color */
+    font-weight: 500; /* Bold header text */
+}
+button {
+    font-family: Inter;
+    src: url('/assets/fonts/Inter-Regular.ttf');
+}
+fieldset {
+    display: block;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-before: 0em;
+    -webkit-padding-start: 0em;
+    -webkit-padding-end: 0em;
+    -webkit-padding-after: 0em;
+    border: 0px;
+    border-image-source: initial;
+    border-image-slice: initial;
+    border-image-width: initial;
+    border-image-outset: initial;
+    border-image-repeat: initial;
+    min-width: -webkit-min-content;
+    padding: 30px;
+}
+footer {
+    display: block;
+    padding: 10px;
+}
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 5px 40px;
+    background: #222222;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    opacity: 100%;
+}
+.navbar a{
+    font-size: 14px;
+    color: #e1deda;
+    font-weight: 400;
+    text-decoration: none;
+    margin-left: 25px;
+}
+.photo {
+    display: flex;
+    justify-content: center; /* Horizontally center */
+    align-items: center; /* Vertically center */
+    padding-bottom: 500px;
+}
+.img-mill {
+    max-width: 100%; /* Adjust the max-width to your desired size */
+    max-height: 85vh; /* Adjust the max-height to your desired size */
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    object-position: center;
+    
+}
+
+.support a{
+    display: inline-flex;
+    text-decoration: none;
+    color: #e1deda;
+}
+.navbar a:hover {
+    border-bottom: 1px solid #e1deda;
+}
+.merch {
+    text-align: center;
+}
+.merch button {
+    background-color: #222222;
+    color: #e1deda;
+    border:none;
+    padding: 10px;
+    border-radius: 3%;
+    cursor: pointer;
+}
+.top-tag {
+    text-align: start;
+    padding-left: 12px;
+}
+.price-tag {
+    text-align: start;
+    padding-left: 12px;
+    font-weight: 600;
+}
+.btn {
+    background-color: #e1deda;
+    color: #222222;
+    border:none;
+    padding: 10px;
+    border-radius: 3%;
+    cursor: pointer;
+    src: url(
+
+    );
+}
+.btn:hover {
+    background-color: #333333;
+    color: #e1deda;
+    transition: 0.05s;
+}
+.btn2 {
+    background-color: #222222;
+    color: #e1deda;
+    border:none;
+    padding: 10px 15px;
+    border-radius: 3%;
+    cursor: pointer;
+    src: url(
+
+    );
+}
+.btn2:hover {
+    background-color: #333333;
+    color: #e1deda;
+    transition: 0.05s;
+}
+.product {
+    cursor: pointer;
+    transition: transform 0.05s;
+}
+.product:hover {
+    -ms-transform: scale(1.03);
+    -webkit-transform: scale(1.03);
+    transform: scale(1.03);
+}
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.input-container {
+    position: relative;
+    margin-bottom: 10px; /* Adjust the spacing between input and button */
+}
+.input-label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: #e1deda;
+    font-size: 12px; /* Adjust the font size for the label */
+    transition: font-size 0.3s, opacity 0.3s;
+}
+.ghost-input {
+  display: block;
+  font-weight:300;
+  color: #e1deda;
+  width: 100%;
+  font-size: 25px;
+  border:0px;
+  outline: none;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background-color: transparent;
+  border-bottom: 1px solid #e1deda;
+  font-family: Inter;
+  src: url('/assets/fonts/Inter-Regular.ttf');
+  padding: 10px 15px;
+  margin: 30px 0px;
+}
+.ghost-input:focus + .input-label,
+.ghost-input:valid + .input-label {
+    font-size: 10px; /* Adjust the font size when focused or has content */
+    opacity: 75%;
+}
+.ghost-input:hover {
+    border: 1px solid #e1deda;
+}
+::placeholder {
+    color: #e1deda;
+    opacity: 55%;
+}
+#divbawah {
+        display: flex;
+        justify-content: center; /* Center the elements horizontally */
+        text-transform: uppercase;
+}
+
+#divbawah div {
+    padding: 25px;
+    color: #e1deda;
+    font-size: 14px;
+}
+#millenium {
+    margin-top: 20px;
+    padding-top: 20px;
+    width: 100%;
+}
+#shows {
+    background-color: #222222; /* Set your desired background color */
+    width: 100%; /* Make the background stretch from left to right */
+    text-align: center; /* Center the content horizontally */
+    box-sizing: flex;
+}
+#shows-2 {
+    text-align: center; /* Center the content horizontally */
+    display: flex;
+    justify-content: center; /* Center the button horizontally */
+    align-items: center; /* Center the button vertically */
+}
+#merchpage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 100px;
+    
+}
+#merchpage div{
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    color: #e1deda;
+    font-size: 14px;
+    border-collapse: separate;
+    border-spacing: 10px;
+    box-sizing: border-box;
+}
+#container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+#container div {
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    color: #e1deda;
+    font-size: 14px;
+    border-collapse: separate;
+    border-spacing: 10px;
+    box-sizing: border-box;
+}
