@@ -1,0 +1,75 @@
+* {
+    box-sizing: border-box;
+    font-family: Inter;
+    src: url('/assets/fonts/Inter-Regular.ttf');
+}
+body {
+    min-height: 100vh;
+    background-color: black;
+    background-image: url('/assets/pic/DESIGNSYNDROME-PAPERCUT-TEXTURE---TRANSPARENT100.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+}
+h1 {
+    font-family: TacticSansExd-BldIt;
+    src: url('/assets/fonts/TacticSansExd-BldIt.otf');
+    font-size: 36px;
+    color: #e1deda;
+}
+h2 {
+    font-family: Inter;
+    src: url('/assets/fonts/Inter-Regular.ttf');
+    font-weight: bold;
+    text-align: center;
+    font-size: 34px;
+    color: #e1deda;
+}
+a {
+    text-decoration: none;
+}
+a:visited { 
+    text-decoration: none; 
+    color: #e1deda; 
+}
+p {
+    text-align: center;
+    font-family: Inter;
+    src: url('/assets/fonts/Inter-Regular.ttf');
+    font-weight: 400;
+    font-size: 14px;
+    color: #e1deda;
+}
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 5px 60px;
+    background: #121212;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    opacity: 100%;
+}
+.navbar a{
+    font-size: 14px;
+    color: #e1deda;
+    font-weight: 400;
+    text-decoration: none;
+    margin-left: 25px;
+}
+.returns {
+    margin-top: 150px;
+    margin-left: 60px;
+    margin-right: 60px;
+    margin-bottom: 100px;
+}
+.returns p {
+    margin-left: 100px;
+    margin-right: 100px;
+    padding-bottom: 10px;
+}

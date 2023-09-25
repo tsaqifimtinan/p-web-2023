@@ -16,15 +16,19 @@ body {
 h1 {
     font-family: TacticSansExd-BldIt;
     src: url('/assets/fonts/TacticSansExd-BldIt.otf');
-    font-size: 36px;
+    font-size: 30px;
     color: #e1deda;
-    padding-top: 0 !important;
-    margin-bottom: 0 !important;
 }
 h2 {
     font-family: Inter;
     src: url('/assets/fonts/Inter-Regular.ttf');
     font-weight: bold;
+    text-align: center;
+    color: #e1deda;
+}
+h3 {
+    font-family: Inter;
+    src: url('/assets/fonts/Inter-Regular.ttf');
     text-align: center;
     color: #e1deda;
 }
@@ -40,7 +44,6 @@ p {
     font-family: Inter;
     src: url('/assets/fonts/Inter-Regular.ttf');
     font-weight: 400;
-    font-size: 14px;
     color: #e1deda;
 }
 a {
@@ -95,10 +98,10 @@ button {
 }
 fieldset {
     display: block;
-    -webkit-margin-center: 0px;
+    -webkit-margin-start: 0px;
     -webkit-margin-end: 0px;
     -webkit-padding-before: 0em;
-    -webkit-padding-center: 0em;
+    -webkit-padding-start: 0em;
     -webkit-padding-end: 0em;
     -webkit-padding-after: 0em;
     border: 0px;
@@ -119,7 +122,7 @@ footer {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 1.2% 60px;
+    padding: 5px 40px;
     background: #121212;
     display: flex;
     justify-content: space-between;
@@ -171,11 +174,12 @@ footer {
 }
 .top-tag {
     text-align: center;
-    font-weight: 500;
+    font-size: 15px;
 }
 .price-tag {
     text-align: center;
     font-weight: 600;
+    font-size: 14px;
 }
 .btn {
     background-color: #e1deda;
@@ -213,8 +217,14 @@ footer {
     cursor: pointer;
 }
 .support p {
-    font-size: 13px;
-    font-weight: 600;
+    font-size: 12px;
+}
+.product-row {
+    display: flex;
+    justify-content: space-around; /* Adjust this based on your spacing preference */
+    align-items: flex-start; /* Align items at the start of each row */
+    flex-wrap: wrap; /* Allow items to wrap to the next row if needed */
+    margin-bottom: 20px; /* Optional: Add margin between rows */
 }
 .fade-in-section {
     opacity: 0;
@@ -226,67 +236,14 @@ footer {
     transform: translateY(0);
 }
 .product {
-    cursor: pointer;
-    transition: transform 0.05s;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 10px;
+    width: calc(33.33% - 20px); /* Adjust the width as needed, subtracting margin */
+    margin: 10px; /* Add margin around each product */
+    text-align: left; /* Align the text within each product */
 }
 .product:hover {
     -ms-transform: scale(1.03);
     -webkit-transform: scale(1.03);
     transform: scale(1.03);
-}
-.form-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.form-container p {
-    font-size: 10px;
-    padding-top: 20px;
-    padding-left: 250px;
-    padding-right: 250px;
-}
-.input-container {
-    position: relative;
-    margin-bottom: 10px; /* Adjust the spacing between input and button */
-}
-.input-label {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    color: #e1deda;
-    font-size: 12px; /* Adjust the font size for the label */
-    transition: font-size 0.3s, opacity 0.3s;
-}
-.ghost-input {
-  display: block;
-  font-weight:300;
-  color: #e1deda;
-  width: 100%;
-  font-size: 25px;
-  border:0px;
-  outline: none;
-  width: 100%;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  background-color: transparent;
-  border-bottom: 1px solid #e1deda;
-  font-family: Inter;
-  src: url('/assets/fonts/Inter-Regular.ttf');
-  padding: 10px 15px;
-  margin: 30px 0px;
-}
-.ghost-input:focus + .input-label,
-.ghost-input:valid + .input-label {
-    font-size: 10px;
-    opacity: 75%;
-}
-.ghost-input:hover {
-    border: 1px solid #e1deda;
 }
 ::placeholder {
     color: #e1deda;
@@ -294,7 +251,7 @@ footer {
 }
 #divbawah {
         display: flex;
-        justify-content: center;
+        justify-content: center; /* Center the elements horizontally */
         text-transform: uppercase;
 }
 
@@ -309,18 +266,16 @@ footer {
     width: 100%;
 }
 #shows {
-    background-color: #121212;
-    width: 100%;
-    text-align: center;
+    background-color: #121212; /* Set your desired background color */
+    width: 100%; /* Make the background stretch from left to right */
+    text-align: center; /* Center the content horizontally */
     box-sizing: flex;
-    padding-left: 10%;
-    padding-right: 10%;
 }
 #shows-2 {
-    text-align: center;
+    text-align: center; /* Center the content horizontally */
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: center; /* Center the button horizontally */
+    align-items: center; /* Center the button vertically */
 }
 #merchpage {
     display: flex;
@@ -333,7 +288,7 @@ footer {
     align-items: center;
     justify-content: center;
     width: 100%;
-    padding-left: 4%;
+    padding-left: 1%;
     border-radius: 5px;
     color: #e1deda;
     font-size: 14px;
@@ -345,13 +300,13 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-top: 10vh;
+    
 }
 #container div {
     align-items: center;
     justify-content: center;
     width: 100%;
-    padding-left: 0%;
+    padding-left: 3%;
     border-radius: 5px;
     color: #e1deda;
     font-size: 14px;

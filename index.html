@@ -5,25 +5,29 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Main Home - ETRNAL MUSIC</title>
-        <link rel="stylesheet" href="html.css"
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <link rel="stylesheet" href="html.css">
+        <script src="app.js"></script>
     </head>
     <body>
-
+    
     <header class="header">
         <a href="#" class="logo"><h1>ETRNAL</h1></a>
 
         <nav class="navbar">
-            <a href="#">ACCOUNT</a>
-            <a href="#">STORE</a>
+            <a href="merch.html">STORE</a>
             <a href="#">BOOKING</a>
             <a href="#">VIDEO</a>
+            <a href="#">CART</a>
         </nav>
     </header>
     <br><br><br>
+    <a href="#shows">
         <div id="millenium" class="photo">
             <img src="assets/pic/millenium2.png" class="img-mill">
         </div>
-    
+    </a>
+
     <div id="shows">
         <br><br><br>
         <table>
@@ -120,28 +124,49 @@
                     </form>
                 </td>
             </tr>
+            <tr>
+                <td>XX November</td>
+                <td>COLOGNE, DE</td>
+                <td>Bootshaus</td>
+                <td>
+                    <form>
+                        <a href="tickets.html">
+                        <button type="button" class="btn">Tickets</button>
+                        </a>
+                    </form>
+                </td>
+                <td>
+                    <form>
+                        <a href="vip.html">
+                        <button type="button" class="btn">VIP</button>
+                        </a>
+                    </form>
+                </td>
+            </tr>
         </table>
         <br><br><br>
-    </div> 
-
-    <br><br><br><br>
-    <div id="container">
-        <div class="product">
-            <img src="assets/pic/143.png" width= 95% height= 30%>
-            <p class="top-tag">ETRNAL LOGO T-SHIRT
-            <p class="price-tag">Rp125.000
-        </div>
-        <div class="product">
-            <img src="assets/pic/DESIGN SYNDROME FREE DANK STICKER MOCKUPS.png" width= 95% height= 30%>
-            <p class="top-tag">INSPIRE TO CREATE STICKER PACK
-            <p class="price-tag">Rp39.000
-        </div>
-        <div class="product">
-            <img src="assets/pic/143_2.png" width= 95% height= 30%>
-            <p class="top-tag">ETRNAL BARCODE T-SHIRT
-            <p class="price-tag">Rp125.000
-        </div>
     </div>
+
+    <section class="fade-in-section">
+        <div id="container">
+            <div class="product">
+                <img src="assets/pic/143.png" width= 80% height= 30%>
+                <p class="top-tag">ETRNAL LOGO T-SHIRT
+                <p class="price-tag">Rp125.000
+            </div>
+            <div class="product">
+                <img src="assets/pic/DESIGN SYNDROME FREE DANK STICKER MOCKUPS.png" width= 80% height= 30%>
+                <p class="top-tag">INSPIRE TO CREATE STICKER PACK
+                <p class="price-tag">Rp39.000
+            </div>
+            <div class="product">
+                <img src="assets/pic/143_2.png" width= 80% height= 30%>
+                <p class="top-tag">ETRNAL BARCODE T-SHIRT
+                <p class="price-tag">Rp125.000
+            </div>
+        </div>
+    </section>
+
     <br><br>
     <div class="merch">
         <a href="merch.html">
@@ -161,26 +186,28 @@
                     <label for="email" class="input-label">EMAIL ADDRESS</label>
                 </div>
                 <button type="button" class="btn2" onclick="submitForm()">SUBMIT</button>
+                <p>I AGREE TO RECEIVE PERSONALIZED UPDATES AND MARKETING MESSAGES BASED ON MY INFORMATION, INTERESTS, ACTIVITIES, WEBSITE VISITS AND DEVICE DATA.</p>
             </form>
         </fieldset>        
     </div>
     <br><br><br>
 
     <div id="divbawah">
-        <div class="product">
+        <div class="support">
             <a href="returns.html">
             <p>RETURNS/EXCHANGE POLICY</p></a>
         </div>
-        <div class="product">
+        <div class="support">
             <a href="shipping.html">
             <p>SHIPPING/DELIVERY TIME</p></a>
         </div>
-        <div class="product">
+        <div class="support">
             <a href="order.html">
             <p>ORDER CONFIRMATION</p></a>
         </div>
     </div>
 
     <p style="font-size: 12px;">© 2023 ACIPMAUJADIDJ & ECHA
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     </body>    
 </html>
