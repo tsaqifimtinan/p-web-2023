@@ -1,114 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Calculator</title>
-            <style>
-            div {
-                display: flex;
-                padding-bottom: 10px;
-            }
-            button {
-                margin-right: 5px;
-            }
-            input {
-                margin-bottom: 5px;
-            }
-            </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        div {
+            display: flex;
+            padding-bottom: 10px;
+        }
+        button {
+            margin-right: 5px;
+        }
+        input {
+            margin-bottom: 5px;
+        }
+    </style>
 </head>
 <body>
-        <div>
-                <input type="number" id="num1">
-        </div>
-        <div>
-                <button onclick="addNumber(0)">0</button>
-                <button onclick="addNumber(1)">1</button>
-                <button onclick="addNumber(2)">2</button>
-                <button onclick="addNumber(3)">3</button>
-                <button onclick="addNumber(4)">4</button>
-                <button onclick="addNumber(5)">5</button>
-                <button onclick="addNumber(6)">6</button>
-                <button onclick="addNumber(7)">7</button>
-                <button onclick="addNumber(8)">8</button>
-                <button onclick="addNumber(9)">9</button>
-        </div>
-        <div>
-                <button onclick="addOperator('+')">+</button>
-                <button onclick="addOperator('-')">-</button>
-                <button onclick="addOperator('*')">*</button>
-                <button onclick="addOperator('/')">/</button>
-                <button onclick="addOperator('=')">=</button>
-                <button onclick="clearInput()">Clear</button>
-        </div>
-        <div>
-                <p>Hasil: </p>
-                <p id="result"></p>
-        </div>
-        <script>
-                var inputVal = "";
-                
-                function addNumber(number) {
-                    var num1 = document.getElementById("num1");
-                    num1.value += number;
-                    inputVal += number;
+<div>
+    <input type="text" id="num1">
+</div>
+<div>
+    <button onclick="addToInput('0')">0</button>
+    <button onclick="addToInput('1')">1</button>
+    <button onclick="addToInput('2')">2</button>
+    <button onclick="addToInput('3')">3</button>
+    <button onclick="addToInput('4')">4</button>
+    <button onclick="addToInput('5')">5</button>
+    <button onclick="addToInput('6')">6</button>
+    <button onclick="addToInput('7')">7</button>
+    <button onclick="addToInput('8')">8</button>
+    <button onclick="addToInput('9')">9</button>
+</div>
+<div>
+    <button onclick="addToInput('+')">+</button>
+    <button onclick="addToInput('-')">-</button>
+    <button onclick="addToInput('*')">*</button>
+    <button onclick="addToInput('/')">/</button>
+    <button onclick="calculateResult()">=</button>
+    <button onclick="clearInput()">Clear</button>
+</div>
+<div>
+    <p>Hasil: </p>
+    <p id="result"></p>
+</div>
+<script>
+    var inputVal = "";
+
+    function addToInput(value) {
+        var num1 = document.getElementById("num1");
+        num1.value += value;
+        inputVal += value;
+    }
+
+    function calculateResult() {
+        var num1 = document.getElementById("num1");
+        var result = evaluateExpression(inputVal);
+        document.getElementById("result").innerHTML = result;
+        inputVal = result.toString();
+        num1.value = inputVal;
+    }
+
+    function clearInput() {
+        var num1 = document.getElementById("num1");
+        num1.value = "";
+        inputVal = "";
+        document.getElementById("result").innerHTML = "";
+    }
+
+    function evaluateExpression(expression) {
+        var operators = {
+            "+": function (a, b) {
+                return a + b
+            },
+            "-": function (a, b) {
+                return a - b
+            },
+            "*": function (a, b) {
+                return a * b
+            },
+            "/": function (a, b) {
+                return a / b
+            }
+        };
+        var tokens = expression.split(/([+\-*/])/);
+        var values = [];
+        var currentOperator = null;
+        for (var i = 0; i < tokens.length; i++) {
+            var token = tokens[i];
+            if (token in operators) {
+                currentOperator = operators[token];
+            } else {
+                var value = parseFloat(token);
+                if (!isNaN(value)) {
+                    values.push(value);
                 }
-                
-                function addOperator(operator) {
-                    var num1 = document.getElementById("num1");
-                    var lastChar = inputVal.charAt(inputVal.length - 1);
-                    if (lastChar.match(/[+\-*/%]/)) {
-                        inputVal = inputVal.substring(0, inputVal.length - 1) + operator;
-                    } else {
-                        inputVal += operator;
-                    }
-                    if (operator === "=") {
-                        var result = evaluateExpression(inputVal);
-                        document.getElementById("result").innerHTML = result;
-                        inputVal = result.toString();
-                        num1.value = inputVal;
-                    } else {
-                        num1.value = inputVal;
-                    }
-                }
-                
-                function clearInput() {
-                    var num1 = document.getElementById("num1");
-                    num1.value = "";
-                    inputVal = "";
-                    document.getElementById("result").innerHTML = "";
-                }
-                
-                function evaluateExpression(expression) {
-                    var operators = {
-                        "+": function(a, b) { return a + b },
-                        "-": function(a, b) { return a - b },
-                        "*": function(a, b) { return a * b },
-                        "/": function(a, b) { return a / b }
-                    };
-                    var tokens = expression.split(/([+\-*/])/);
-                    var values = [];
-                    var currentOperator = null;
-                    for (var i = 0; i < tokens.length; i++) {
-                        var token = tokens[i];
-                        if (token in operators) {
-                            currentOperator = operators[token];
-                        } else {
-                            var value = parseFloat(token);
-                            if (!isNaN(value)) {
-                                values.push(value);
-                            }
-                        }
-                        if (currentOperator && values.length >= 2) {
-                            var b = values.pop();
-                            var a = values.pop();
-                            var result = currentOperator(a, b);
-                            values.push(result);
-                            currentOperator = null;
-                        }
-                    }
-                    return values[0];
-                }
-        </script>
+            }
+            if (currentOperator && values.length >= 2) {
+                var b = values.pop();
+                var a = values.pop();
+                var result = currentOperator(a, b);
+                values.push(result);
+                currentOperator = null;
+            }
+        }
+        return values[0];
+    }
+</script>
 </body>
 </html>
