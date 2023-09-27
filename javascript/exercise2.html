@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-        <meta charset="UTF-8">
-        <title>Calculator</title>
-        <style>
-                div {
-                        display: flex;
-                        padding-bottom: 10px;
-                }
-                button {
-                        margin-right: 5px;
-                }
-                input {
-                        margin-right: 5px;
-                }
-        </style>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Calculator</title>
+            <style>
+            div {
+                display: flex;
+                padding-bottom: 10px;
+            }
+            button {
+                margin-right: 5px;
+            }
+            input {
+                margin-bottom: 5px;
+            }
+            </style>
 </head>
 <body>
         <div>
@@ -57,9 +58,9 @@
                     var num1 = document.getElementById("num1");
                     var lastChar = inputVal.charAt(inputVal.length - 1);
                     if (lastChar.match(/[+\-*/%]/)) {
-                        inputVal = inputVal.substring(0, inputVal.length - 1) + " " + operator;
+                        inputVal = inputVal.substring(0, inputVal.length - 1) + operator;
                     } else {
-                        inputVal += " " + operator;
+                        inputVal += operator;
                     }
                     if (operator === "=") {
                         var result = evaluateExpression(inputVal);
@@ -85,7 +86,7 @@
                         "*": function(a, b) { return a * b },
                         "/": function(a, b) { return a / b }
                     };
-                    var tokens = expression.split(" ");
+                    var tokens = expression.split(/([+\-*/])/);
                     var values = [];
                     var currentOperator = null;
                     for (var i = 0; i < tokens.length; i++) {
