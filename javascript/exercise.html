@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+    <input type="number" id="num1">
+    <input type="number" id="num2">
+    </div>
+    <div>
+    <button onclick="add(num1, num2)">+</button>
+    <button onclick="sub(num1, num2)">-</button>
+    <button onclick="mul(num1, num2)">*</button>
+    <button onclick="div(num1, num2)">/</button>
+    </div>
+    <div>
+    <p>Hasil: </p>
+    <p id="result"></p>
+    </div>
+</body>
+<style>
+    div {
+        display: flex;
+        padding-bottom: 10px;
+    }
+    button {
+        margin-right: 5px;
+    }
+    input {
+        margin-right: 5px;
+    }
+</style>
+<script>
+    function add() {
+    var num1 = document.getElementById("num1").value;
+    var num2 = document.getElementById("num2").value;
+    var result = document.getElementById("result");
+    result.innerHTML = parseInt(num1) + parseInt(num2);
+    }
+
+    function sub() {
+    var num1 = document.getElementById("num1").value;
+    var num2 = document.getElementById("num2").value;
+    var result = document.getElementById("result");
+    result.innerHTML = parseInt(num1) - parseInt(num2);
+    }
+
+    function mul() {
+    var num1 = document.getElementById("num1").value;
+    var num2 = document.getElementById("num2").value;
+    var result = document.getElementById("result");
+    result.innerHTML = parseInt(num1) * parseInt(num2);
+    }
+
+    function div() {
+    var num1 = document.getElementById("num1").value;
+    var num2 = document.getElementById("num2").value;
+    var result = document.getElementById("result");
+    result.innerHTML = parseInt(num1) / parseInt(num2);
+    }
+</script>
+</html>
